@@ -1,0 +1,13 @@
+.root-container {
+  min-height: 100vh;
+}
+
+.main-sidebar-container {
+  display: flex;
+  height: 80vh;
+}
+
+main {
+  border: solid 1px black;
+  width: 75vw;
+}
