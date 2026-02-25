@@ -4,10 +4,11 @@
 
 .main-sidebar-container {
   display: flex;
-  height: 80vh;
+  height: 95vh;
+  width: 100vw;
+  background-color: var(--grey-blue);
 }
 
 main {
-  border: solid 1px black;
   width: 75vw;
 }

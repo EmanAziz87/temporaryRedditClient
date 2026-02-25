@@ -10,7 +10,6 @@ const RootLayout = () => {
       <Header />
       <div className={styles["main-sidebar-container"]}>
         <main>
-          main
           <Outlet />
         </main>
         <SideBar />
