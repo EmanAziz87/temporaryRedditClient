@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import postService from "../../api/postService";
+import { NavLink } from "react-router";
 
 const HomeFeed = () => {
   const { data, isLoading, error } = useQuery({
@@ -17,13 +18,14 @@ const HomeFeed = () => {
       <ul>
         {data.allFetchedPosts.map((post: any) => {
           return (
-            <div>
+            <NavLink to={`/post/${post.id}`} key={post.id}>
               <div>{post.title}</div>
               <img src={post.mediaUrl} alt="" width={300} height={300} />
               <div>{post.content}</div>
-              <div>{post.likes}</div>
+              <div>Likes: {post.likes}</div>
+              <div>Dislikes: {post.dislikes}</div>
               <br />
-            </div>
+            </NavLink>
           );
         })}
       </ul>

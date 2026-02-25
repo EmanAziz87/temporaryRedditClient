@@ -7,4 +7,9 @@ const fetchAllPosts = async () => {
   return response.data;
 };
 
-export default { fetchAllPosts };
+const fetchPost = async (postId: number) => {
+  const response = await axios.get(`${baseUrl}/posts/${postId}`);
+  return response.data;
+};
+
+export default { fetchAllPosts, fetchPost };

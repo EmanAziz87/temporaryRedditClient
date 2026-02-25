@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import RootLayout from "./layouts/RootLayout/RootLayout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import HomeFeed from "./pages/HomeFeed";
+import PostDetails from "./pages/PostDetails";
 
 const queryClient = new QueryClient();
 
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<RootLayout />}>
             <Route index element={<HomeFeed />} />
+            <Route path="post/:id" element={<PostDetails />} />
           </Route>
         </Routes>
       </BrowserRouter>
