@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<RootLayout />}>
             <Route index element={<HomeFeed />} />
-            <Route path="post/:id" element={<PostDetails />} />
+            <Route path="post/:communityId/:postId" element={<PostDetails />} />
           </Route>
         </Routes>
       </BrowserRouter>

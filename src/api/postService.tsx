@@ -7,8 +7,10 @@ const fetchAllPosts = async () => {
   return response.data;
 };
 
-const fetchPost = async (postId: number) => {
-  const response = await axios.get(`${baseUrl}/posts/${postId}`);
+const fetchPost = async (communityId: string, postId: string) => {
+  const response = await axios.get(
+    `${baseUrl}/posts/community/${communityId}/post/${postId}`,
+  );
   return response.data;
 };
 

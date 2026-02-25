@@ -18,7 +18,7 @@ const HomeFeed = () => {
       <ul>
         {data.allFetchedPosts.map((post: any) => {
           return (
-            <NavLink to={`/post/${post.id}`} key={post.id}>
+            <NavLink to={`/post/${post.communityId}/${post.id}`} key={post.id}>
               <div>{post.title}</div>
               <img src={post.mediaUrl} alt="" width={300} height={300} />
               <div>{post.content}</div>
