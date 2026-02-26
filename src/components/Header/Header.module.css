@@ -10,6 +10,7 @@
 .header-title {
   color: #6bafc8;
   margin-left: 1rem;
+  cursor: pointer;
 }
 
 .menu-icon-container {
